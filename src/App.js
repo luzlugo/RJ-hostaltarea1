@@ -1,30 +1,19 @@
-
-import hostal from './hostal.jpg';
+//import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Menupeludos from './Menupeludos';
+import Header from './componentes/Header/Header';
+//import NavScrollExample from './componentes/Header/menu/Menu';
+import ItemListContainer from './componentes/Itemlistcontainer/ItemListContainer';
 
 
 function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      <a
-          className="App-link"
-          href="https://hostalcasaelprado.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={hostal} className="App-logoHostal" alt="logo" /> 
-        </a>     
-        
-        <p>
-         El lugar donde tus peludos y tu pueden hospedarse
-        </p>
-       
-        <Menupeludos/>
-      </header >
-    </div>
+      <Header/>
+      <ItemListContainer/>
+      
+  </div>
   );
 }
 
