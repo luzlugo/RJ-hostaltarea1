@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const Contador = () => {
+export const Contador = () => {
 
     const [counter, setCounter] = useState(0)
 

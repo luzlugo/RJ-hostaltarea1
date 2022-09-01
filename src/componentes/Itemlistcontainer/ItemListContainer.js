@@ -1,23 +1,11 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import peluditos from './peluditos.JPG';
-import Contador from '../Contador/Contador';
-function ItemListContainer() {
+import {ItemList} from "../ItemList/ItemList"
+//import {Contador} from "../Contador/Contador"
+const ItemListContainer = () => {
   return (
-    <>
-      <Card>
-        <Card.Img variant="top" src={peluditos} />
-        <Card.Body>
-          <Card.Text>
-            En hostal Casa El prado tus peluditos son bienvenidos tambien
-          </Card.Text>
-          <Button variant="primary" color='green'>Descubre como</Button>
-        </Card.Body>
-      </Card>
-      <br />
-      <Contador/>
-    </>
+    <div className="container my-5">
+      <ItemList/>
+  </div>
   );
 }
 
-export default ItemListContainer;
+export default ItemListContainer
