@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
         setProductos(res)
 
       }else{
-        setProductos(res.filter((prod)=> prod.category === categoryId))
+        setProductos(res.filter((prod)=> prod.category === Number(categoryId)))
 
       }
        
