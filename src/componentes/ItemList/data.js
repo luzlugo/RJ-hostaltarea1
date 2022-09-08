@@ -24,7 +24,7 @@ export const stock = [
       img:'https://via.placeholder.com/250',
       stock: 50,
       desc: 'comoda y acogedora',
-      category: 'Collares'
+      category: 'collares'
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ export const stock = [
       img:'https://via.placeholder.com/250',
       stock: 50,
       desc: 'comoda y acogedora',
-      category: 'Collares'
+      category: 'collares'
     },
     {
       id: 5,
@@ -42,7 +42,7 @@ export const stock = [
       img:'https://via.placeholder.com/250',
       stock: 50,
       desc: 'comoda y acogedora',
-      category: 'Pulseras'
+      category: 'pulseras'
     },
 
     {
@@ -52,6 +52,6 @@ export const stock = [
       img:'https://via.placeholder.com/250',
       stock: 50,
       desc: 'comoda y acogedora',
-      category: 'Pulseras'
+      category: 'pulseras'
     }
   ]

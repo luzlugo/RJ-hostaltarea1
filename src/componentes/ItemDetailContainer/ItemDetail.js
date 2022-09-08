@@ -4,7 +4,6 @@ export const ItemDetail =({item} ) =>{
 
   return (
     <div className="container my-5">
-    <img src={item.img}/>
     <h4>{item.nombre}</h4>
     <p>Precio: {item.precio}</p>
     <small>Stock disponible: {item.stock}</small>
