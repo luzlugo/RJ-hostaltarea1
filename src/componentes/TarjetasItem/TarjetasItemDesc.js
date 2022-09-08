@@ -5,12 +5,12 @@ export const TarjetasItemDesc =({producto} ) =>{
            <img 
            alt="habitacion"
            src={producto.img}/>
-           <h4>{producto.nombre}</h4>
-           <p>Precio: {producto.precio}</p>
-           <small>Stock disponible: {producto.stock}</small>
+           <h4 className="pruebaTitulo">{producto.nombre}</h4>
+           <p className="pruebaprecio">Precio: {producto.precio}</p>
+           <small className="pruebastock">Stock disponible: {producto.stock}</small>
            <p>{producto.desc}</p>
            <a 
-           href="#"
+           href="https://hostalcasaelprado.com/"
            className="btn btn-primary my-2">Ver más</a>
       </div>
   

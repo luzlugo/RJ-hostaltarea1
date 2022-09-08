@@ -2,6 +2,7 @@
 import './Header.css';
 import hostal from './hostal.jpg';
 import Cartwidget from '../CartWidget/CartWidget';
+import {Link} from 'react-router-dom'
 
 const Header = () => {
 
@@ -10,34 +11,16 @@ const Header = () => {
 
 <header className="bg-header">
         <div className='header-container'>
-         <h1 >
-         <a
-          className="header-title"
-          href="https://hostalcasaelprado.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={hostal} className="App-logoHostal" alt="logo" /> 
-        </a> 
-         </h1>
+        <Link to='/' className="header-navlink">
+          
+        <img src={hostal} className="App-logoHostal" alt="logo" /> 
+          </Link>
+          
+     
           <nav className="header-navbar">
-            <a 
-            className="header-navlink"
-            href="https://hostalcasaelprado.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-              MASCOTAS
-              </a>
-            <a className="header-navlink"
-            href="https://hostalcasaelprado.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-            HABITACIONES</a>
-            <a className="header-navlink"
-            href="https://hostalcasaelprado.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-            TOURES</a>
+            <Link to='/Productos/collares'className="header-navlink">Collares </Link>
+            <Link to='/Productos/anillos'className="header-navlink">Anillos </Link>
+            <Link to='/Productos/pulseras'className="header-navlink">Pulseras </Link>
           </nav>
           
           <Cartwidget/>

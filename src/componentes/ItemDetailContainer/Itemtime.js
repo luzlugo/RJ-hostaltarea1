@@ -1,6 +1,6 @@
-import { stock } from "../ItemList/data"
+import { stock } from "./ItemDetail"
 
-export const pedirDatos = () => {
+export const Itemtime = () => {
     return new Promise((resolve, reject)=> {
         
       setTimeout(() => {

@@ -12,7 +12,7 @@ const Cartwidget = () => {
         
          <a
           className="header-title"
-          href=""
+          href="https://hostalcasaelprado.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
