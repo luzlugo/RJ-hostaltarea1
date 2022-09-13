@@ -7,19 +7,22 @@ import ItemListContainer from '../componentes/Itemlistcontainer/ItemListContaine
 //import Nosotros from '../componentes/Nosotros/Nosotros';
 //import Contacto from '../componentes/Contacto/Contacto';
 //import ItemDetailContainer from '../componentes/ItemDetailContainer/ItemDetailContainer';
-
+import { CartContext } from '../context/CartContext';
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 import ItemDetailContainer from '../componentes/ItemDetailContainer/ItemDetailContainer';
+import { useState } from 'react';
 
 function App() {
+   
+  const [cart, setCart] = useState([])
 
   return (
-    <div className="App">
-      <BrowserRouter>
+   
+       <BrowserRouter>
 
          <Header/>
          <Routes>
@@ -27,20 +30,17 @@ function App() {
 
           
           <Route path='/' element={<ItemListContainer/>}></Route>
-          <Route path='/Productos/:categoryId' element={<ItemListContainer/>}></Route>
+          <Route path='/productos/:categoryId' element={<ItemListContainer/>}></Route>
           <Route path='/item/:itemId' element={<ItemDetailContainer/>}></Route>
+          <Route path='*' element={<h2>Pagina no existe</h2>} ></Route>
 
-          {/*<Route path='/Contacto' element={<Contacto/>}></Route>
-          <Route path='/Nosotros' element={<Nosotros/>}></Route>*/}
+       
          </Routes>
 
-        {/*<Nosotros/>
-         <Contacto/>      
-  <ItemListContainer/>*/}
 
       </BrowserRouter>
 
-  </div>
+  
   );
 }
 

@@ -1,64 +1,82 @@
-import './ItemDetail.css'; 
+import './ItemDetail.scss'; 
+import ItemCounter from '../Contador/ItemCounter';
+import { useContext, useState } from "react"
+import { CartContext } from '../../context/CartContext';
+
 
 export const ItemDetail =({item} ) =>{
 
+  const {cart, setCart} = useContext(CartContext)
+  console.log(cart)
+  const [cantidad, setCantidad] = useState(1)
+
+  const handleAgregar  =() => {
+    const itemToCart = {
+       id:item.id,
+       precio: item.precio,
+       nombre:item.nombre,
+       cantidad
+    }
+      console.log(itemToCart)
+   // console.log ({
+     //    ...item,
+      //   cantidad
+    //})
+}
+
+
   return (
-<div className="body">
+<div className='Container1'>
 
 
-<div id="container">	
-	
-    <div class="product-details">
-      
-      
-    <h1>{item.nombre}</h1>
-   		
-    <span class="hint-star star">
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <i class="fa fa-star" aria-hidden="true"></i>
-      <i class="fa fa-star-half-o" aria-hidden="true"></i>
-      <i class="fa fa-star-o" aria-hidden="true"></i>
-    </span>
-      
-      <p class="information">" 
-      La pulsera es un objeto de joyería que sirve para que los clientes la utilicen en sus muñecas como símbolo de belleza. De esta manera, su geometría suele ser redonda, o una forma similar, para adaptarse a la forma de esta parte del cuerpo.
-    </p>      
-      
-   	
-  <div class="control">
-    
-           <a 
-           href="https://hostalcasaelprado.com/"
-           className="btn btn-primary my-5">Comprar</a>
-  
-    
-  </div>
-        
-  </div>    
-  <div class="product-image">
-    
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Iran-bracelet.jpg" alt="Omar Dsoky"/>
-    
-  
-  <div class="info">
-    <h2>The Description</h2>
-    <ul>
-      <li><strong>Sun Needs: </strong>Full Sun</li>
-      <li><strong>Soil Needs: </strong>Damp</li>
-      <li><strong>Zones: </strong>9 - 11</li>
-      <li><strong>Height: </strong>2 - 3 feet</li>
-      <li><strong>Blooms in: </strong>Mid‑Summer - Mid‑Fall</li>
-      <li><strong>Features: </strong>Tolerates heat</li>
-    </ul>
-  </div>
-  </div> 
-  
-  
-  </div>
-
-
-
+<main>
+    <div className='card'>
+      <div className='card__title'>
+        <div className='icon'>
+          <a href='#'><i className='fa fa-arrow-left'></i></a>
+        </div>
+        <h3>New products</h3>
+      </div>
+      <div className='card__body'>
+        <div className='half'>
+          <div className='featured_text'>
+            <h1>{item.nombre}</h1>
+            <p className='sub'>{item.tipo}</p>
+            <p className='price'>Precio: {item.precio}</p>
+          </div>
+          <div className='image'>
+            <img src={item.img} alt=''/>
+          </div>
+        </div>
+        <div className='half'>
+          <div className='description'>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatem nam pariatur voluptate perferendis, asperiores aspernatur! Porro similique consequatur, nobis soluta minima, quasi laboriosam hic cupiditate perferendis esse numquam magni.</p>
+          </div>
+          <span className='stock'><i className='fa fa-pen'></i> In stock</span>
+          <div className='reviews'>
+            <ul className='stars'>
+              <li><i className='fa fa-star'></i></li>
+              <li><i className='fa fa-star'></i></li>
+              <li><i className='fa fa-star'></i></li>
+              <li><i className='fa fa-star'></i></li>
+              <li><i className='fa fa-star-o'></i></li>
+            </ul>
+            <span>(64 reviews)</span>
+          </div>
+        </div>
+      </div>
+      <div className='card__footer'>
+        <div className='recommend'>
+        <ItemCounter 
+        max={item.stock}
+        counter={cantidad}
+        setCounter={setCantidad}
+        handleAgregar={handleAgregar}
+        />
+        </div>
+      </div>
+    </div>
+  </main>
 
    
 </div>

@@ -4,11 +4,13 @@ import {ItemList} from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
 
 export const ItemListContainer = () => {
+
     const [productos, setProductos] = useState([])
-    const [loading, setLoading] = useState(true)
-  
+    const [loading, setLoading] = useState(true)  
     const {categoryId} =useParams()
+    
    console.log(categoryId)
+   console.log(productos)
 
  useEffect(() => {
    setLoading(true)
@@ -19,7 +21,7 @@ export const ItemListContainer = () => {
         setProductos(res)
 
       }else{
-        setProductos(res.filter((prod)=> prod.category === Number(categoryId)))
+        setProductos(res.filter((prod)=> prod.category === categoryId))
 
       }
        

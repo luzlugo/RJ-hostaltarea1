@@ -1,22 +1,35 @@
-import TarjetasItemDesc from "../TarjetasItem/TarjetasItemDesc"
+
+import { useEffect, useState } from "react"
+import { pedirDatos } from "../Helpers/Pedirdatos"
+import {TarjetasItem} from "../TarjetasItem/TarjetasItem"
 
 export const ItemList =({productos = []} ) =>{
 
-   return (
-
-       
-     <div  className="container my-5">
-         <h2>Productos</h2>
-           <hr/>
-      
-       {productos.map((prod) => {
-         return <TarjetasItemDesc producto={prod} key={prod.id}/>
-          
-      })}
-    </div>
-   )
+export const ItemList = () => {
+    const [productos, setProductos] = useState([])
+  
+   console.log(productos)
 
 
+ useEffect(() => {
+   pedirDatos()
+    .then((res) => {
+       setProductos(res)
+    })
+    .catch((error) => {
+        console.log(error)
+    })
+    .finally(()=> {
+      //console.log("Fin del proceso")
+    })
+ }, [])
+ 
+
+    return (
+        <div>
+            <TarjetasItem productos={productos}/>
+        </div>
+    )
 }
 
 export default ItemList
