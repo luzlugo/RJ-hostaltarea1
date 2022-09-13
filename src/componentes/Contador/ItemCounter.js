@@ -19,7 +19,7 @@ const ItemCounter = ({max, counter, setCounter, handleAgregar }) => {
 
      return(
         
-       <div className="container my-s">
+       <div className="container contador my-s">
              <div>
              <h2>Contador</h2>
               <hr/>

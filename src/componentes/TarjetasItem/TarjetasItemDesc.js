@@ -15,7 +15,7 @@ export const TarjetasItemDesc =({producto} ) =>{
            <p>{producto.desc}</p>
            <p>{producto.category}</p>
         </Card.Text>
-        <Link to='/item/3'className="header-navlink"><Button variant="primary">Ver más</Button> </Link>
+        <Link to={`/item/${producto.id}`}className="header-navlink"><Button variant="primary">Ver más</Button> </Link>
       </Card.Body>
     </Card>
   );
