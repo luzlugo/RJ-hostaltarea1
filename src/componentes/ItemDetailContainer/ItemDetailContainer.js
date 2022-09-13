@@ -10,7 +10,6 @@ export const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
    console.log(itemId)
-   console.log(item)
 
  useEffect(() => {
      
@@ -18,7 +17,7 @@ export const ItemDetailContainer = () => {
 
     pedirDatos()
        .then((res) => {
-          setItem(res.find((prod)=> prod.id === Number(itemId)))
+          setItem(res.find((prod)=> prod.item === Number(itemId)))
 
        })
         .catch(err => console.log (err))
