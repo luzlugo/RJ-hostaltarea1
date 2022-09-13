@@ -1,13 +1,12 @@
 import TarjetasItemDesc from "./TarjetasItemDesc"
-
+import './TarjetasItem.css'
 export const TarjetasItem =({productos = []} ) =>{
 
    return (
 
        
      <div  className="container my-5">
-         <h2>Productos</h2>
-           <hr/>
+        
       
        {productos.map((prod) => {
          return <TarjetasItemDesc producto={prod} key={prod.id}/>

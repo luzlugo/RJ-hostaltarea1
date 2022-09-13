@@ -3,8 +3,6 @@ import { useEffect, useState } from "react"
 import { pedirDatos } from "../Helpers/Pedirdatos"
 import {TarjetasItem} from "../TarjetasItem/TarjetasItem"
 
-export const ItemList =({productos = []} ) =>{
-
 export const ItemList = () => {
     const [productos, setProductos] = useState([])
   

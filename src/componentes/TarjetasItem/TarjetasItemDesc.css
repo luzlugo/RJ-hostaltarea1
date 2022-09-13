@@ -54,10 +54,6 @@
     text-transform: uppercase;
 }
 .pruebaTitulo{
-<<<<<<< Updated upstream
-
-    color: aqua;
-=======
     color: #fff;
 }
 .card .details .center h1 span {
@@ -91,5 +87,4 @@
 }
 .card .details .center ul li a:hover {
     background: #ff3636;
->>>>>>> Stashed changes
 }
