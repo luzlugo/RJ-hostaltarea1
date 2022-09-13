@@ -1,6 +1,6 @@
 import './Contador.css'
 
-const ItemCounter = ({max, counter, setCounter, handleAgregar }) => {
+const ItemCounter = ({max, counter, setCounter, item, handleAgregar }) => {
 
     const handleRestar =()=> {
      if(counter > 1 ){
@@ -17,9 +17,6 @@ const ItemCounter = ({max, counter, setCounter, handleAgregar }) => {
 
     }
     
-    const handleAgregar = () =>{
-
-    }
 
      return(
         

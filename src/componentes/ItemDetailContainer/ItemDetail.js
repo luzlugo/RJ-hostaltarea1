@@ -70,6 +70,7 @@ export const ItemDetail =({item} ) =>{
         counter={cantidad}
         setCounter={setCantidad}
         handleAgregar={handleAgregar}
+        item={item}
         />
         </div>
       </div>
