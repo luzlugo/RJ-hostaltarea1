@@ -10,7 +10,6 @@ export const ItemListContainer = () => {
     const {categoryId} =useParams()
     
    console.log(categoryId)
-   console.log(productos)
 
  useEffect(() => {
    setLoading(true)
