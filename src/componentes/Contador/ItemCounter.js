@@ -15,7 +15,11 @@ const ItemCounter = ({max, counter, setCounter, handleAgregar }) => {
           setCounter(counter + 1)
      }       
 
-    }    
+    }
+    
+    const handleAgregar = () =>{
+
+    }
 
      return(
         
