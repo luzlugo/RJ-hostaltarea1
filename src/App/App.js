@@ -18,9 +18,13 @@ import { useState } from 'react';
 
 function App() {
    
+  const [cart, setCart] = useState([])
 
   return (
-   
+    <CartContext.Provider value={{
+      cart,
+     setCart
+    }}>
        <BrowserRouter>
 
          <Header/>
@@ -39,7 +43,7 @@ function App() {
 
       </BrowserRouter>
 
-  
+    </CartContext.Provider>
   );
 }
 
