@@ -19,11 +19,21 @@ import { useState } from 'react';
 function App() {
    
   const [cart, setCart] = useState([])
+   
+  const addToCart = (item) => {
+    setCart([...cart,item])
+  }
+
+  const IsInCart = (id) => {
+    return cart.some((item) => item.id === id)
+  }
+
 
   return (
     <CartContext.Provider value={{
       cart,
-     setCart
+     addToCart,
+     IsInCart
     }}>
        <BrowserRouter>
 

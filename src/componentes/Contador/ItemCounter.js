@@ -29,10 +29,12 @@ const ItemCounter = ({max, counter, setCounter, item, handleAgregar }) => {
               <button onClick={handleSumar} className="btn btn-outline-primary">+</button>
               
               <hr/>
+              
               </div>
-        <div className='action'>
+              <div className='action'>
           <button onClick={handleAgregar} type='button'>Add to cart</button>
-        </div>             
+         
+        </div>    
        </div>
 
 

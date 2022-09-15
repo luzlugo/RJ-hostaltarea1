@@ -4,3 +4,16 @@
     justify-content: space-evenly;
     align-items: center;
 }
+.finish{
+
+    cursor: pointer;
+    border: 1px solid #115dd8;
+    padding: 14px 30px;
+    border-radius: 200px;
+    color: #fff;
+    background: #115dd8;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    transition: 200ms;
+    text-decoration: none;
+}

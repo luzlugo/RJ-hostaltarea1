@@ -2,9 +2,12 @@ import './ItemDetail.scss';
 import ItemCounter from '../Contador/ItemCounter';
 import { useContext, useState } from "react"
 import { CartContext } from '../../context/CartContext';
-
+import { Link } from 'react-router-dom';
 
 export const ItemDetail =({item} ) =>{
+
+  const{cart, addToCart, IsInCart} = useContext(CartContext)
+  console.log(cart)
 
   const [cantidad, setCantidad] = useState(1)
 
@@ -15,11 +18,12 @@ export const ItemDetail =({item} ) =>{
        nombre:item.nombre,
        cantidad
     }
-      console.log(itemToCart)
-   // console.log ({
-     //    ...item,
-      //   cantidad
-    //})
+      //const newCart = cart.slice() 
+      //newCart.push(itemToCart)
+     // setCart(newCart)
+    console.log(IsInCart(item.id)) 
+     addToCart(itemToCart)
+
 }
 
 
@@ -64,14 +68,22 @@ export const ItemDetail =({item} ) =>{
         </div>
       </div>
       <div className='card__footer'>
+
         <div className='recommend'>
-        <ItemCounter 
-        max={item.stock}
-        counter={cantidad}
-        setCounter={setCantidad}
-        handleAgregar={handleAgregar}
-        item={item}
-        />
+          {
+            IsInCart(item.id)
+            ? <Link to="/cart" className='finish'>Terminar Compra</Link>
+            : <ItemCounter 
+            max={item.stock}
+            counter={cantidad}
+            setCounter={setCantidad}
+            handleAgregar={handleAgregar}
+            item={item}
+            
+            />
+          }
+        
+        
         </div>
       </div>
     </div>

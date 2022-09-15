@@ -22,7 +22,7 @@ main{
 }
 .container, .container-lg, .container-md, .container-sm{
 
-    max-width: 100%;
+  max-width: 100%;
 }
 .card{
   box-shadow: 0 6px 6px rgba(#000, 0.3);
@@ -183,7 +183,8 @@ main{
     }
     
     .recommend{
-      flex: 1 0 10px;
+      flex: 1 0 10px;      
+    display: flex;
       
       p{
         margin: 0;
