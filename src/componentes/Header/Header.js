@@ -1,6 +1,6 @@
 
 import './Header.css';
-import hostal from './hostal.jpg';
+import logo from './logo.png';
 import Cartwidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom'
 
@@ -13,7 +13,7 @@ const Header = () => {
         <div className='header-container'>
         <Link to='/' className="header-navlink">
           
-        <img src={hostal} className="App-logoHostal" alt="logo" /> 
+        <img src={logo} className="App-logoHostal" alt="logo" /> 
           </Link>
           
      

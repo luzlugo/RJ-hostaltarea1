@@ -46,3 +46,4 @@ export const ItemDetailContainer = () => {
 }
 
 export default ItemDetailContainer
+
