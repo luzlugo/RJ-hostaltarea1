@@ -6,7 +6,7 @@ export const Itemtime = () => {
       setTimeout(() => {
           resolve (stock)
   
-      }, 2000)
+      }, 1000)
   
     
     
