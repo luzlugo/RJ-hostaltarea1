@@ -10,7 +10,7 @@ const Cart = () => {
            
 
         <main>
-            <div className='card'>
+            <div className='card-compra'>
               <div className='card__title'>
                 <div className='icon'>
                   <a href='#'><i className='fa fa-arrow-left'></i></a>
