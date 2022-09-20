@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import './Cart.scss'; 
 const Cart = () => {
 
-  const {cart, CarTotal, emptyCart} = useContext(CartContext) 
+  const {cart, CarTotal, emptyCart, removeItem} = useContext(CartContext) 
 
      return(
         <div className='Container1'>
@@ -32,6 +32,7 @@ const Cart = () => {
                     <p> Categoria: {item.tipo}</p>
                     <p> Precio: {item.precio}</p>
                     <p>Cantidad: {item.cantidad}</p>
+                    <button onClick={()=> removeItem(item.id)} className="btn btn-danger">-</button>
                     <hr/>
                    </div>
 
