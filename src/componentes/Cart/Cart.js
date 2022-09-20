@@ -23,17 +23,21 @@ const Cart = () => {
                   <div className='description'>
                   <div className='featured_text'>
                     <p className='price'>Lista de productos</p>
-                    <hr/>
+                    
                     { cart.map((item) =>(
 
-<div key={item.id}>
-<p >Nombre: {item.nombre}</p>
+                   <div key={item.id}>
+                    <hr/>
+                    <h3>{item.nombre}</h3>
                     <p> Categoria: {item.tipo}</p>
                     <p> Precio: {item.precio}</p>
                     <p>Cantidad: {item.cantidad}</p>
-</div>
+                    <hr/>
+                   </div>
 
-))}                    
+                    ))}  
+                    
+                                      
                     </div>
                   </div>
                  </div>
