@@ -40,7 +40,10 @@ function App() {
   const emptyCart = () => {
       setCart([])
   }
-
+ 
+  const removeItem = (id) => {
+    setCart( cart.filter((item) => item.id !== id))
+  }
   return (
     <CartContext.Provider value={{
       cart,
@@ -48,7 +51,8 @@ function App() {
      IsInCart,
      cartQuantity,
      CarTotal,
-     emptyCart
+     emptyCart,
+     removeItem
     }}>
        <BrowserRouter>
 
