@@ -16,6 +16,7 @@ export const ItemDetail =({item} ) =>{
        id:item.id,
        precio: item.precio,
        nombre:item.nombre,
+       tipo:item.category,
        cantidad
     }
       //const newCart = cart.slice() 
@@ -72,7 +73,7 @@ export const ItemDetail =({item} ) =>{
         <div className='recommend'>
           {
             IsInCart(item.id)
-            ? <Link to="/cart" className='finish'>Terminar Compra</Link>
+            ? <Link to="/Cart" className='finish'>Terminar Compra</Link>
             : <ItemCounter 
             max={item.stock}
             counter={cantidad}

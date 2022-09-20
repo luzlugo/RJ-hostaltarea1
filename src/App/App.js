@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import ItemDetailContainer from '../componentes/ItemDetailContainer/ItemDetailContainer';
 import { useState } from 'react';
+import Cart from '../componentes/Cart/Cart';
 
 function App() {
    
@@ -47,7 +48,7 @@ function App() {
           <Route path='/item/:itemId' element={<ItemDetailContainer/>}></Route>
           <Route path='*' element={<h2>Pagina no existe</h2>} ></Route>
 
-       
+          <Route path='/Cart' element={<Cart/>}></Route>
          </Routes>
 
 
